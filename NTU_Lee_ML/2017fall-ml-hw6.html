@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="author" content="sunprinceS" >
+<meta property="og:image" content="joy.png"/>
+<!--<meta property="og:image" content="http://www.themainstreetmouse.com/wp-content/uploads/2015/06/inhinh657551-613x345-150x150.jpg"/>-->
+<title>Machine Learning HW6 (2017, Fall)</title>
+
+<xmp theme="cerulean" style="display:none;">
+# Assignment #6 Unsupervised learning & dimension reduction
+
+<hr>
+### Announcement
+
+* Kaggle Deadline: 2018/1/11 11:59 P.M. (GMT+8)
+* Github Deadline: 2018/1/12 11:59 P.M. (GMT+8)
+* TA 會於 2018/1/5 00:00 A.M. (GMT+8) 釋出範例程式碼，亦為超過 Kaggle simple baseline 的加分截止期限
+
+<hr>
+### Link
+* 投影片連結 <a href="https://docs.google.com/presentation/d/1v2aJnjqplnQ5YSprp6IXbWM_VPavtolqpgbGWM4HidY" target="_blank"><i class="fa fa-slideshare"></i></a>
+* Kaggle 連結 <a href="https://www.kaggle.com/t/3dea5a5172844c9186545a06dcdf0a85" target="_blank"><i class="fa fa-trophy"></i></a>
+* code 遲交表單 <a href="https://goo.gl/forms/U739TuuKJE3QDdWb2" target="_blank"><i class="fa fa-file-text"></i></a>
+* github 遲交表單 <a href="https://goo.gl/forms/ulB0FqGngd8cmvjf2" target="_blank"><i class="fa fa-file-text"></i></a>
+* 小老師申請表單 <a href="https://goo.gl/forms/xSn2IjAaXMbouE733" target="_blank"><i class="fa fa-file-text"></i></a>
+* report template <a href="https://docs.google.com/document/d/13c6RqKvcYdSBMxq4yFljUUDnj5fXmv9cGa01yfFwcFU/edit?usp=sharing" target="_blank"><i class="fa fa-file-text"></i></a>
+  
+<!-- <hr> -->
+<!-- ### <a href="" target="_blank">Sample code</a>  -->
+  
+<hr>
+### Report
+#### Part A: PCA of colored faces
+* 作業要求: <br />
+(.5%) 請畫出所有臉的平均。<br />
+(.5%) 請畫出前四個 Eigenfaces，也就是對應到前四大 Eigenvalues 的 Eigenvectors。<br />
+(.5%) 請從數據集中挑出任意四個圖片，並用前四大 Eigenfaces 進行 reconstruction，並畫出結果。<br />
+(.5%) 請寫出前四大 Eigenfaces 各自所佔的比重 (explained variance ratio)，請四捨五入到小數點後一位。
+  
+#### Part B: Visualization of Chinese word embedding
+* 作業要求: <br />
+(.5%) 請說明你用哪一個 word2vec 套件，並針對你有調整的參數說明那個參數的意義。<br />
+(.5%) 請在 Report 上放上你 visualization 的結果。<br />
+(.5%) 請討論你從 visualization 的結果觀察到什麼。
+  
+#### Part C: Image clustering
+* 作業要求: <br />
+(.5%) 請比較至少兩種不同的 feature extraction 及其結果。<br />
+(.5%) 預測 visualization.npy 中的 label，在二維平面上視覺化 label 的分佈。<br />
+(.5%) visualization.npy 中前 5000 個 images 來自 dataset A，後 5000 個 images 來自 dataset B。請根據這個資訊，在二維平面上視覺化 label 的分佈，接著比較和自己預測的 label 之間有何不同。<br />
+ (visualization.npy 將在 Kaggle deadline 之後公布在 Kaggle 上)
+
+
+
+<hr>
+### Rules
+* Basic : No extra dataset. No plagiarism.
+* Allowed toolkits for "PCA of colored faces":
+  + NumPy 1.13+
+  + scikit-image 0.13+
+* Allowed toolkits for "Visualization of Chinese word embedding":
+  + you can use anything
+* Allowed toolkits for "Image clustering":
+  + python 3.5+
+  + tensorflow 1.3
+  + keras 2.0.8
+  + pytorch 0.2.0
+  + scikit-image 0.13+
+  + pillow 4.3.0
+  + scikit-learn 0.19+
+  + pandas 0.20+
+  + numpy
+  + scipy
+  + matplotlib
+  + h5py
+  + Python Standard Lib
+
+</xmp>
+</xmp> <script src="strapdown.js"></script> </html>
+<footer>
+  <center><a href="./index.html"><i class="fa fa-home"></i></a></center>
+  <center><i class="fa fa-github"></i></a> Posted by: <a href="https://github.com/ntumlta/" target="_blank">ntumlta</a> </center>
+  <center><i class="fa fa-envelope"></i> Contact information: <a href="mailto:"> ntu.mlta@gmail.com </a>.</center>
+  <center><i class="fa fa-mortar-board"></i> Course information: <a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML17_2.html", target="_blank">Machine Learning (2017, Fall) @ National Taiwan University</a>.</center>
+</footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59748795-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
