@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="author" content="sunprinceS" >
+<meta property="og:image" content="joy.png"/>
+<!--<meta property="og:image" content="http://www.themainstreetmouse.com/wp-content/uploads/2015/06/inhinh657551-613x345-150x150.jpg"/>-->
+<title>Machine Learning (2017, Fall)</title>
+
+<xmp theme="cerulean" style="display:none;">
+# Assignment 1 - Predicting PM2.5
+In this assignment, you will practice using Gradient Descent to predict PM2.5.
+
+<hr>
+
+### Announcement
+
+10/13  
+
+* report 中 public + private 分數的意思是：testing中240筆的RMSE，也就是 square root{[(public)^2+(private)^2]/2}
+* [testing答案](./ans.csv)釋出！
+* hw1_best.sh：選擇的2筆kaggle分數中，private較好的那一個model (註：不用完全一模一樣重現，可接受誤差+0.2)
+  - ex. (1) public:6.5/private:5.5 (2) public:6.1/private:5.7
+  - 滿足hw1_best.sh 的 private分數 < 5.5 + 0.2 即可
+* hw1.sh：public分數 > public simple baseline 即可
+* kaggle的成績：只要2筆中任何1筆>某baseline，即得該baseline成績
+* github死線：今晚午夜
+
+10/6  
+
+* 10/5有通過public simple baseline名單 <a href="https://docs.google.com/spreadsheets/d/1rrGrkrRp0tt2p7xukT4wqz8Jr-0qkJeqk1zy6z6N32E/edit?usp=sharing" target="_blank"><i class="fa fa-columns fa-fw"></i></a>
+  - 因 **kaggle名稱**...等等原因沒有被登記到的同學，請填寫 <a href="https://goo.gl/forms/sr82chHL9CfI8bBh1" target="_blank"><i class="fa fa-columns fa-fw"></i></a>
+
+### 重要連結
+
+* 投影片連結 <a href="https://docs.google.com/presentation/d/1JAaVzT8UTShojE385a-wGzRe8WsJpQE0FhWQGc_Q-L0/edit?usp=sharing" target="_blank"><i class="fa fa-slideshare"></i></a>
+* 老師講解投影片 <a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2017_2/Lecture/HW1%20(v2).pdf" target="_blank"><i class="fa fa-slideshare"></i></a>
+* Kaggle 連結 <a href="https://www.kaggle.com/c/ml-2017fall-hw1" target="_blank"><i class="fa fa-trophy"></i></a>
+* Github Repo 表單 <a href="https://goo.gl/forms/LOX5W6ByDPSNWA6N2" target="_blank"><i class="fa fa-file-text"></i></a>
+* report template <a href="https://docs.google.com/document/d/1kzztLEGUUkaZ_YwzPKO0q2dOeAQyrHWmwPlRmCkzV_s/edit?usp=sharing" target="_blank"><i class="fa fa-edit fa-fw"></i></a>
+* 遲交表單 <a href="https://goo.gl/forms/UA6bLNDYJ4JKVytV2" target="_blank"><i class="fa fa-eye"></i></a>
+* 10/6(五)上課時間, 助教會釋出hw1的[Sample Code](./code.html)以及<a href="https://goo.gl/h5UukH" target="_blank">Supplementary Slide</a>，同時會邀請小老師幫大家解決程式問題。
+* (已截止)小老師教學表單 <a href="https://goo.gl/forms/epctvoGTRxeDsFIH2" target="_blank"><i class="fa fa-hand-stop-o fa-fw"></i></a>
+
+### The requirements of this assignment are as follows:
+
+- hw1.sh
+  * **Python3.5+** required
+  * Only (1)numpy (2)scipy (3)pandas are allowed
+  * numpy.linalg.lstsq is forbidden.
+  * Please handcraft "linear regression" using **Gradient Descent**
+  * beat public simple baseline
+  * For those who wish to load model instead of running whole training precess:
+    + please upload your training code named **train.py**
+    + as long as there are Gradient Descent Code in **train.py**, it's fine
+
+
+- hw1_best.sh
+  * **Python3.5+** required
+  * any library is allowed
+  * meet the higher score you choose in kaggle
+
+### Data 簡介
+
+* [下載 train.csv](./train.csv) : 每個月前20天每個小時的氣象資料(每小時有18種測資)。共12個月。
+* [下載 test.csv](./test.csv) : 排除train.csv中剩餘的資料，取連續9小時的資料當feature，預測第10小時的PM2.5值。總共取240筆不重複的test data。
+* [下載 sampleSubmission.csv](./sampleSubmission.csv)
+
+### 作業修正＆講解
+
+* report第五題題目修正：X = [ x^1 x^2 ... x^N ] 改為 X = [ x^1 x^2 ... x^N ]^T
+* 第1-3題請都以題目給訂的兩種model來回答
+
+### FAQ
+
+Q1. 為了回答report(1)-(3)是不是要上傳kaggle 8次,這樣會浪費kaggle上傳的coda  
+    Ans. 同學可以先把model訓練好的答案做好，等到kaggle死線之後便可以無限上傳看error了  
+  
+Q2. 如果預先對training data做normalization，那我可以上傳train.csv然後在hw1.sh中自己讀進來嗎  
+    Ans. 可以  
+
+</xmp>
+</xmp> <script src="strapdown.js"></script> </html>
+<footer>
+  <center><a href="./index.html"><i class="fa fa-home"></i></a></center>
+  <center><i class="fa fa-github"></i></a> Posted by: <a href="https://github.com/ntumlta/" target="_blank">ntumlta</a> </center>
+  <center><i class="fa fa-envelope"></i> Contact information: <a href="mailto:"> ntu.mlta@gmail.com </a>.</center>
+  <center><i class="fa fa-mortar-board"></i> Course information: <a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML17_2.html", target="_blank">Machine Learning (2017, Fall) @ National Taiwan University</a>.</center>
+</footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59748795-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
